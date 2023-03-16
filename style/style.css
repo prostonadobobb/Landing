@@ -1,0 +1,120 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    padding: 0 40px;
+    margin: auto;
+}
+
+.banner {
+    background: url(../img/IMAGE.jpg) top center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+
+}
+
+.title_content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    max-width: 480px;
+    color: #0A044B;
+}
+
+.description {
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 29px;
+    letter-spacing: 0.4px;
+    padding-top: 28px;
+    animation: des ease 3s forwards;
+    animation-delay: 3s;
+    opacity: 0;   
+}
+.des.active {
+    opacity: 0;
+    animation: des 2s forwards;
+    color: #0A044B;
+    
+
+}
+
+@keyframes des {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.buttons {
+    padding-top: 28px;
+}
+
+.button {
+    font-size: 16px;
+    text-align: center;
+    background: #5D3EA8;
+    border-radius: 8px;
+    border: none;
+    position: relative;
+    padding: 10px 38px 10px 20px;
+    cursor: pointer;
+}
+
+.button_right {
+    background: none;
+}
+
+.button_left {
+    color: #fff;
+    margin-right: 10px;
+    transition: .5s;
+}
+
+.button_left:hover {
+    transform: scale(1.1);
+    
+}
+
+.button::before {
+    content: " ";
+    position: absolute;
+    background-image: url(../img/white_arrow.png);
+    color: white;
+    width: 10px;
+    height: 12px;
+    top: 13px;
+    right: 20px;
+}
+
+.button.button_right::before {
+    background-image: url(../img/black_arrow.png);
+}
+
+.title {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 62px;
+    line-height: 70px;
+    letter-spacing: 1px;
+    color: transparent;
+}
+
+.title.active {
+    opacity: 0;
+    animation: ani 2s forwards;
+    color: #0A044B;
+
+}
+
+@keyframes ani {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
